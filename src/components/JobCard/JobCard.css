@@ -1,0 +1,152 @@
+.Card-content {
+    border-radius: 20px !important;
+}
+
+.posted-time {
+    padding: 4px 6px;
+    display: inline-block;
+    box-shadow: rgba(6, 6, 6, 0.05) 0px 2px 6px 0px;
+    border-radius: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 9px;
+}
+
+.card-body {
+    box-shadow: none !important;
+}
+
+.company-role-info-container {
+    display: flex;
+    gap: 8px;
+}
+
+.company-role-info-container>img {
+    width: 25px;
+    height: 40px;
+}
+
+.company-role-info-container>div>p {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.job-role>p:first-child {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+}
+
+.job-role>p:last-child {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.estimated-salary {
+    font-size: 14px !important;
+    font-weight: 500;
+    margin: 8px 0 !important;
+    color: rgb(77, 89, 106);
+}
+
+.job-details {
+    height: 250px;
+    overflow: hidden;
+    mask-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.job-details p {
+    margin: 0;
+}
+
+.about-heading {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+}
+
+.about-subheading {
+    font-size: 14px;
+}
+
+.company-details {
+    color: rgb(0 0 0 / 70%);
+    font-size: 14px;
+}
+
+.view-job {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.view-job>a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.skills-required {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+}
+.skills-required > h3{
+    margin-top:35px;
+    margin-bottom: 4px;
+}
+.skills-required > div > span{
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    color: #4943da;
+    background-color: #d9fed3;
+    padding: 2px 7px;
+    border-radius: 50px;
+    margin: 2px 0 0 7px;
+}
+.skills-required > div > span:first-child{
+    margin-left:0 ;
+}
+.skills-required > h2{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    margin-top: 14px;
+    color: #8b8b8b;
+}
+.skills-required > p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+}
+.apply-container{
+    width: 100%;
+    padding: 15px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.apply-container > button {
+    width: 100%;
+    background-color: rgb(85, 239, 196);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
