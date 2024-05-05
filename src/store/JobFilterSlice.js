@@ -5,7 +5,7 @@ const initialState = {
   filters: {
     roles: [],
     experience: null,
-    // company: '',
+    company: '',
     minSalary: null,
     jobType: [],
     techStack: [] 
@@ -25,9 +25,9 @@ const jobFilterSlice = createSlice({
     setExperience: (state, action) => {
       state.filters.experience = action.payload;
     },
-    // setCompany: (state, action) => {
-    //   state.filters.company = action.payload;
-    // },
+    setCompany: (state, action) => {
+      state.filters.company = action.payload;
+    },
     setMinSalary: (state, action) => {
       state.filters.minSalary = action.payload;
     },
@@ -40,6 +40,6 @@ const jobFilterSlice = createSlice({
   }
 });
 
-export const { setFilters, setRoles, setExperience, setMinSalary, setJobType, setTechStack } = jobFilterSlice.actions;
+export const { setFilters, setRoles, setExperience, setMinSalary,setCompany, setJobType, setTechStack } = jobFilterSlice.actions;
 
 export default jobFilterSlice.reducer;

@@ -16,7 +16,6 @@ const JobResults = () => {
     const [page, setPage] = useState(1);
     const filters = useSelector(state => state.jobFilter.filters); // Get filters from the Redux store
 
-    console.log("filters ", filters)
     useEffect(() => {
         dispatch(fetchJobsRequest());
         fetchJobs()
@@ -72,21 +71,18 @@ const JobResults = () => {
         }
 
         // Filter by jobType
-        // Filter by jobType
         if (filters.jobType?.length > 0) {
             filtered = filtered.filter(job => {
                 const location = job.location.toLowerCase();
                 if (filters.jobType.includes(toTitleCase(location))) {
-                    return true; // Job location matches the selected job type
+                    return true;
                 } else if (filters.jobType.includes('In Office')) {
-                    // Include jobs with locations other than 'remote' and 'hybrid' under 'in office' job type
                     return !['remote', 'hybrid'].includes(location);
                 } else {
-                    return false; // Exclude jobs not matching the selected job type
+                    return false;
                 }
             });
         }
-
 
         // Filter by minimum base pay
         if (filters.minSalary) {
@@ -94,14 +90,16 @@ const JobResults = () => {
             filtered = filtered.filter(job => {
 
                 if (job.minJdSalary >= filters.minSalary) {
-                    console.log("job min sal: ", job.minJdSalary)
                     return true
                 }
             });
         }
-        console.log("filtered: ", filtered?.length)
 
-        console.log("filtered: ", filtered)
+        // Filter by company name
+        if (filters.company) {
+            const companyNameFilter = filters.company.toLowerCase();
+            filtered = filtered.filter(job => job.companyName.toLowerCase().includes(companyNameFilter));
+        }
 
         return filtered;
     };
