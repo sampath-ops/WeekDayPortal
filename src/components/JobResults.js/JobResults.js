@@ -1,5 +1,5 @@
 // JobResults.js
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchJobsRequest, fetchJobsFailure, fetchJobsSuccess } from '../../store/jobSlice';
 import Grid from '@mui/material/Grid';
@@ -60,20 +60,20 @@ const JobResults = () => {
 
     return (
         <InfiniteScroll
-        dataLength={jobs.jdList ? jobs.jdList.length : 0}
-        next={fetchJobs}
-        hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
-        endMessage={
-            <p style={{ textAlign: 'center' }}>
-                <b>No more jobs to load</b>
-            </p>
-        }
-    >
-        <Grid container spacing={8} className='job-results'>
-            {jobs.jdList && jobs.jdList.map((job, index) => <JobCard key={index} job={job} />)}
-        </Grid>
-    </InfiniteScroll>
+            dataLength={jobs.jdList ? jobs.jdList.length : 0}
+            next={fetchJobs}
+            hasMore={hasMore}
+            loader={<h4>Loading...</h4>}
+            endMessage={
+                <p style={{ textAlign: 'center' }}>
+                    <b>No more jobs to load</b>
+                </p>
+            }
+        >
+            <Grid container spacing={8} className='job-results'>
+                {jobs.jdList && jobs.jdList.map((job, index) => <JobCard key={index} job={job} />)}
+            </Grid>
+        </InfiniteScroll>
     );
 };
 
