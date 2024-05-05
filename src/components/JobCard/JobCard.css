@@ -1,7 +1,11 @@
 .Card-content {
     border-radius: 20px !important;
+    flex: 1;
+    display: grid;
 }
-
+.grid-item{
+    display: flex;
+}
 .posted-time {
     padding: 4px 6px;
     display: inline-block;

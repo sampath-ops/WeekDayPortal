@@ -39,6 +39,7 @@ const JobResults = () => {
         return <div>Error: {error}</div>;
     }
 
+    console.log("jobs: ",jobs)
     return (
         <Grid container spacing={8} className='job-results'>
             {jobs.jdList && jobs.jdList.map(job => <JobCard key={job.jdUid} job={job} />)}
