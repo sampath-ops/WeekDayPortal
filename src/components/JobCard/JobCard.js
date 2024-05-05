@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import "./JobCard.css";
 
 const JobCard = () => {
+  
     return (
             <Grid item xs={12} md={6} lg={4}>
                 <Paper elevation={3} className='Card-content'>
