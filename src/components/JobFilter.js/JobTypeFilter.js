@@ -13,15 +13,16 @@ const JobTypeSelect = () => {
   const selectedJobType = useSelector(state => state.jobFilter.filters.jobType);
   const dispatch = useDispatch();
 
-  const handleChange = selectedOption => {
-    dispatch(setJobType(selectedOption ? selectedOption.value : null));
-  };
+  const handleChange = selectedOptions => {
+    dispatch(setJobType(selectedOptions.map(option => option.value)));
+};
 
   return (
     <Select
       value={options.find(option => option.value === selectedJobType)}
       onChange={handleChange}
       options={options}
+      isMulti
       placeholder="Remote"
     />
   );

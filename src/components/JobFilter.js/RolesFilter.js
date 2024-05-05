@@ -6,7 +6,7 @@ import { setRoles } from '../../store/JobFilterSlice';
 const roles = {
     engineering: [
         "Backend", "Frontend", "Fullstack", "Ios", "Flutter",
-        "React Native", "Android", "Frontend", "Tech Lead",
+        "React Native", "Android", "Tech Lead",
         "Dev-ops", "Data Engineer", "Data Science"
     ],
     design: [
@@ -37,7 +37,7 @@ const RolesSelect = () => {
         <Select
             value={options.flatMap(category => category.options.filter(option => selectedRoles.includes(option.value)))}
             onChange={handleChange}
-            options={options}
+            options={filteredOptions}
             isMulti
             placeholder="Roles"
         />

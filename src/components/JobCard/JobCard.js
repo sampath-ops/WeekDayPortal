@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import "./JobCard.css";
 
-function toTitleCase(text) {
+export function toTitleCase(text) {
     return text.toLowerCase().split(' ').map(function (word) {
         return word.replace(word[0], word[0].toUpperCase());
     }).join(' ');
